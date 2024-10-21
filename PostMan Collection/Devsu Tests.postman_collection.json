@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "0063a8ff-fc02-4c48-bcd3-e4137c50329f",
+		"name": "Devsu Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17164584"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/personas",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/personas/1000000002",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"personas",
+								"1000000002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPersona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identificacion\": 1000000002,\r\n    \"nombre\": \"Test User\",\r\n    \"genero\": \"femenino\",\r\n    \"edad\": 30,\r\n    \"direccion\": \"Av Colon\",\r\n    \"telefono\": \"0991000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/personas",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditPersona",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pepe User\",\r\n    \"edad\": 70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/personas/1000000002",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"personas",
+								"1000000002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePersona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/personas/1000000002",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"personas",
+								"1000000002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/clientes",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personaID\": 1000000002,\r\n    \"contrasena\": \"pepito123\",\r\n    \"estado\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/clientes",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditCliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasena\": \"pepito123##\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/clientes/2",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePersona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro1_port}}/api/clientes/4",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro1_port}}",
+							"path": [
+								"api",
+								"clientes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/cuentas/1234",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"cuentas",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCuenta\": 1111,\r\n    \"clienteId\": 2,\r\n    \"tipo\": \"ahorros\",\r\n    \"saldo\": 10.99999999999999,\r\n    \"estado\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditCuenta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"saldo\": 50.9999999999999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/cuentas/1234",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"cuentas",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/cuentas/1111",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"cuentas",
+								"1111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/movimientos",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCuenta\": 5678,\r\n    \"tipo\": \"deposito\",\r\n    \"valor\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/movimientos",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditMovimiento",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCuenta\": 1234,\r\n    \"tipo\": \"deposito\",\r\n    \"valor\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/movimientos/7",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"movimientos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "GetReportes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:{{micro2_port}}/api/reportes?fecha_inicio=2024-10-17&fecha_fin=2024-10-20&cliente=2",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{micro2_port}}",
+							"path": [
+								"api",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "fecha_inicio",
+									"value": "2024-10-17"
+								},
+								{
+									"key": "fecha_fin",
+									"value": "2024-10-20"
+								},
+								{
+									"key": "cliente",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "micro1_port",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"key": "micro2_port",
+			"value": "8090",
+			"type": "string"
+		}
+	]
+}
